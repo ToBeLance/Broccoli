@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="名字: "/>
+            <EditText
+                android:hint="命名菜谱名字"
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标签: "/>
+            <EditText
+                android:hint="加入菜谱标签描述"
+                android:id="@+id/tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="人数: "/>
+            <EditText
+                android:hint="建议用餐人数"
+                android:id="@+id/peoplenum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="准备时间: "/>
+            <EditText
+                android:hint="食材开始烹饪前的准备食材的时间"
+                android:id="@+id/preparetime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="烹饪时间: "/>
+            <EditText
+                android:hint="食材烹饪的总时间"
+                android:id="@+id/cookingtime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="描述: "/>
+            <EditText
+                android:hint="写下个人该菜谱的描述"
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="菜谱图片"
+            android:textSize="20sp"/>
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/recipe_img"
+            android:layout_margin="10dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/placeholder_img"/>
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_baseline_add_a_photo_24"
+            android:id="@+id/takephoto_recipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拍照"/>
+
+        <View
+            android:layout_marginTop="25dp"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="材料准备"/>
+            <ImageView
+                android:layout_marginStart="120dp"
+                android:src="@drawable/ic_baseline_add_24"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/addmaterial"
+                android:text="添加"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:src="@drawable/ic_baseline_remove_24"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/removematerial"
+                android:layout_marginStart="20dp"
+                android:text="删除"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/materialll"
+            android:orientation="vertical"/>
+        <EditText
+            android:id="@+id/materialname"
+            android:layout_marginStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="食材名字"/>
+        <EditText
+            android:id="@+id/materialamount"
+            android:layout_marginStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="食材用量"/>
+
+        <View
+            android:layout_marginTop="35dp"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="烹饪步骤"/>
+            <ImageView
+                android:src="@drawable/ic_baseline_add_24"
+                android:layout_marginStart="120dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/addprogress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加"/>
+            <ImageView
+                android:src="@drawable/ic_baseline_remove_24"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:id="@+id/removeprogress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="删除"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/progressll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:id="@+id/progresscontent"
+            android:hint="烹饪步骤描述"
+            android:layout_marginStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_margin="10dp"
+            android:textSize="18sp"
+            android:text="拍摄烹饪过程"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_baseline_add_a_photo_24"
+                android:id="@+id/takephoto"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="拍照"/>
+
+            <ImageView
+                android:layout_marginStart="40dp"
+                android:id="@+id/progressimage"
+                android:src="@drawable/placeholder_img"
+                android:layout_width="200dp"
+                android:layout_height="200dp"/>
+        </LinearLayout>
+
+        <View
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+
+        <ImageView
+            android:src="@drawable/ic_baseline_done_outline_24"
+            android:text="添加菜谱"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addrecipe"/>
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

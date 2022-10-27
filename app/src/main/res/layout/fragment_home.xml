@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".homeFragment.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:background="@drawable/search_box_background"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:id="@+id/et_search"
+            android:hint="搜索你需要的菜谱"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView69"
+            />
+        <TextView
+            android:id="@+id/home_tv_cancel"
+            android:visibility="gone"
+            android:layout_marginStart="15dp"
+            android:textSize="20sp"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:text="取消"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/home_page"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:id="@+id/rv_class"
+                android:layout_width="80dp"
+                android:layout_height="250dp"/>
+
+            <View
+                android:layout_margin="10dp"
+                android:layout_width="1dp"
+                android:layout_height="250dp"
+                android:background="@color/black"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:id="@+id/rv_sub_class"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="250dp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_margin="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="10dp"
+            android:id="@+id/rv_recommend_recipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/rv_search_page"
+        android:layout_margin="15dp"
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <include
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        layout="@layout/detail_recipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
